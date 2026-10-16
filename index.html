@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#FFE4ED" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="MelsBDAY" />
+  <meta name="description" content="Малка изненада за Мелс — специално за 20-ия ѝ рожден ден!" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="./assets/icon-180.png" />
+  <link rel="icon" type="image/png" href="./assets/icon-192.png" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>MelsBDAY 💗</title>
+</head>
+<body>
+  <div id="loading-screen" class="loading-screen" aria-hidden="true">
+    <div class="loader-icon"></div>
+    <span>Loading...</span>
+  </div>
+
+  <main id="app" class="app">
+    <!-- HOME PAGE -->
+    <section id="home-screen" class="screen screen--active" aria-label="Начална страница">
+      <article class="card home-card">
+        <div class="eyebrow">✦ &nbsp; HAPPY BIRTHDAY &nbsp; ✦</div>
+        <img class="home-dog" src="./assets/birthday_pekingese.gif" alt="Усмихнат анимиран кафяво-черен пекинез с надпис Happy Birthday" draggable="false" />
+        <h1>ИМА ЛИ РОЖДЕНИЧКА ТУКА?! 🌟</h1>
+        <div class="home-buttons">
+          <button class="btn btn-primary" id="yes-btn" type="button">ДА, АЗ СЪМ!</button>
+          <button class="btn btn-secondary" id="no-btn" type="button">Не съм аз</button>
+        </div>
+      </article>
+      <p class="tiny-footer">✿ направено с любов ✿</p>
+    </section>
+
+    <!-- NO PAGE -->
+    <section id="no-screen" class="screen" aria-label="Закачлива страница" hidden>
+      <article class="card no-card">
+        <div class="eyebrow">✦ &nbsp; АБЕ ЯЯЯЯ! &nbsp; ✦</div>
+        <img class="angry-dog" src="./assets/angry_pekinez.png" alt="Намусен кафяво-черен пекинез" draggable="false" />
+        <h1>НИДЕЙ ЛЪГА Е ПАТАТНИК! 😤</h1>
+      </article>
+      <button type="button" class="subtle-back" id="no-back">← Върни се</button>
+    </section>
+
+    <!-- GAME PAGE -->
+    <section id="game-screen" class="screen" aria-label="Игра: Хвани маймунката" hidden>
+      <article class="card game-card">
+        <header class="game-header">
+          <button class="back-icon" id="game-back" type="button" aria-label="Към началната страница">←</button>
+          <div class="game-header-titles">
+            <div class="eyebrow">✦ &nbsp; BIRTHDAY GAME &nbsp; ✦</div>
+            <h1>ХВАНИ МАЙМУНКАТА! 🐵</h1>
+          </div>
+          <span class="header-spacer" aria-hidden="true"></span>
+        </header>
+
+        <div class="stats-row">
+          <div class="stat" id="score" aria-live="polite">🐵 &nbsp; 0 / 20</div>
+          <div class="stat" id="lives" aria-live="polite">💗 &nbsp; 1</div>
+        </div>
+
+        <div class="arena" id="arena" aria-label="Игрално поле. Плъзни пръст, за да движиш кошницата" tabindex="0">
+          <div class="basket" id="basket" aria-hidden="true"></div>
+          <div class="message-overlay" id="message-overlay">
+            <div class="message-scroll" id="message-scroll">
+              <h2 id="message-title">ГОТОВА ЛИ СИ? 🎀</h2>
+              <p id="message-text">Така, след като установихме, че рожденичка все пак има, ще трябва да тестваме някой неща, за да видим дали си готова за живота от 20 нататък! В следната игра ще проверим реакциите, координацията и концетрацията. Хващай само 🐵!<br><br>Забавлявай се!</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="game-hint">Движи кошницата с пръст · Хващай само 🐵</p>
+        <button class="btn btn-primary game-start" type="button" id="start-btn">СТАРТ 💗</button>
+      </article>
+    </section>
+  </main>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
